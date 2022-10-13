@@ -14,10 +14,19 @@ namespace Engine {
 		{
 			s_instance = this;
 		}
+		//start systems
+
+		//start log
+		m_logSystem.reset(new Log);
+		m_logSystem->start();
 	}
 
 	Application::~Application()
 	{
+		//stop systems
+
+		//stop log
+		m_logSystem->stop();
 	}
 
 
@@ -25,7 +34,7 @@ namespace Engine {
 	{
 		while (m_running)
 		{
-
+			Log::info("Hello world! {0} {1}", 42, "I am a string");
 		};
 	}
 
