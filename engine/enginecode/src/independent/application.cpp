@@ -34,7 +34,7 @@ namespace Engine {
 	{
 		while (m_running)
 		{
-			Log::info("Hello world! {0} {1}", 42, "I am a string");
+			Log::file("Hello world! {0} {1}", 42, "I am a string");
 		};
 	}
 
