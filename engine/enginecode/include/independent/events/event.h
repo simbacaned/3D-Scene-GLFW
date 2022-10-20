@@ -15,7 +15,7 @@ namespace Engine
 		None = 0,
 			WindowClose, WindowResize, WindowFocus, WindowLostFocus, WindowMoved,
 			KeyPressed, KeyReleased, KeyType, MouseButtonPressed, MouseButtonReleased,
-			MouseMoved, MouseScolled
+			MouseMoved, MouseScrolled
 	};
 
 	enum EventCategory
