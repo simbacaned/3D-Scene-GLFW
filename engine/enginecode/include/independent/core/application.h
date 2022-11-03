@@ -6,6 +6,7 @@
 #include "timer.h"
 #include "events/events.h"
 #include "events/eventHandler.h"
+#include "core/window.h"
 
 namespace Engine {
 
@@ -22,10 +23,12 @@ namespace Engine {
 
 		std::shared_ptr<Log> m_logSystem;
 		std::shared_ptr<Timer> m_timer;
+		std::shared_ptr<System> m_windowsSystem;
+		std::shared_ptr<Window> m_window;
+
 	private:
 		static Application* s_instance; //!< Singleton instance of the application
 		bool m_running = true; //!< Is the application running?
-		EventHandler m_handler;
 
 		bool onClose(WindowCloseEvent& e);
 	public:
