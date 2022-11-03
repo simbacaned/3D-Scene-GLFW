@@ -5,6 +5,7 @@
 #include "systems/log.h"
 #include "timer.h"
 #include "events/events.h"
+#include "events/eventHandler.h"
 
 namespace Engine {
 
@@ -24,6 +25,9 @@ namespace Engine {
 	private:
 		static Application* s_instance; //!< Singleton instance of the application
 		bool m_running = true; //!< Is the application running?
+		EventHandler m_handler;
+
+		bool onClose(WindowCloseEvent& e);
 	public:
 		virtual ~Application(); //!< Deconstructor
 		inline static Application& getInstance() { return *s_instance; } //!< Instance getter from singleton pattern

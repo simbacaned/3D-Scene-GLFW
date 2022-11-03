@@ -24,7 +24,7 @@ namespace Engine
 		EventCategoryWindow = 1 << 0,
 		EventCategoryInput = 1 << 1,
 		EventCategoryKeyboard = 1 << 2,
-		WindowCategoryMouse = 1 << 3,
+		EventCategoryMouse = 1 << 3,
 		EventCategoryMouseButton = 1 << 4
 	};
 

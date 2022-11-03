@@ -1,6 +1,6 @@
 /** \file application.cpp
 */
-
+#include <iostream>
 #include "engine_pch.h"
 #include "core/application.h"
 
@@ -31,6 +31,19 @@ namespace Engine {
 		m_timer.reset(new ChronoTimer);
 #endif
 		m_timer->start();
+
+		m_handler.setOnCloseCallback(std::bind(&Application::onClose, this, std::placeholders::_1));
+
+		m_timer->reset();
+	}
+
+	bool Application::onClose(WindowCloseEvent& e)
+	{
+		m_running = false;
+
+		return true;
+
+		return e.handled();
 	}
 
 	Application::~Application()
@@ -53,11 +66,13 @@ namespace Engine {
 			//Log::trace("FPS {0}", 1.0f / timestep);
 			accumTime += timestep;
 			//Log::trace("Cumalative time {0}", accumTime);
-
-			if (accumTime > 5.0f)
+			if (accumTime > 2.0f)
 			{
-				WindowCloseEvent close();
-				WindowResizeEvent resize(800, 600);
+				
+				WindowCloseEvent close;
+				
+				auto& callback = m_handler.getOnCloseCallback();
+				callback(close);
 			}
 		};
 	}
