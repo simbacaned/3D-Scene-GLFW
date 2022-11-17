@@ -31,6 +31,9 @@ namespace Engine {
 		bool m_running = true; //!< Is the application running?
 
 		bool onClose(WindowCloseEvent& e);
+		bool onResize(WindowResizeEvent& e);
+		bool onKeyPressed(KeyPressedEvent& e);
+		bool onKeyReleased(KeyReleasedEvent& e);
 	public:
 		virtual ~Application(); //!< Deconstructor
 		inline static Application& getInstance() { return *s_instance; } //!< Instance getter from singleton pattern
