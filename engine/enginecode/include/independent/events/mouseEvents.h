@@ -13,6 +13,7 @@ namespace Engine
 
 	class MouseMovedEvent : public MouseEvent
 	{
+	public:
 		MouseMovedEvent(float x, float y) : m_mouseX(x), m_mouseY(y) {}
 		static EventType getStaticType() { return EventType::MouseMoved; }
 		virtual EventType getEventType() const override { return getStaticType(); }
@@ -25,6 +26,7 @@ namespace Engine
 
 	class MouseScrolledEvent : public MouseEvent
 	{
+	public:
 		MouseScrolledEvent(float xOffset, float yOffset) : m_xOffset(xOffset), m_yOffset(yOffset) {}
 		static EventType getStaticType() { return EventType::MouseScrolled; }
 		virtual EventType getEventType() const override { return getStaticType(); }

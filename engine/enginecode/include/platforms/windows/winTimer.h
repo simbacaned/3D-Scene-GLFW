@@ -1,10 +1,8 @@
-/** \file entryPoint.h
-*/
 #pragma once
 
 #include <Windows.h>
 #include "core/timer.h"
-
+#include <iostream>
 namespace Engine
 {
 	/** \class WinTimer
@@ -19,14 +17,13 @@ namespace Engine
 			QueryPerformanceCounter(&m_startTime);
 		};
 
-		virtual inline void reset() override {QueryPerformanceCounter(&m_startTime);};
+		virtual inline float reset() override { QueryPerformanceCounter(&m_startTime); return getTimeElapsed(); };
 
 		virtual float getTimeElapsed() override
 		{
+			float result = m_startTime.QuadPart - m_endTime.QuadPart;
 			QueryPerformanceCounter(&m_endTime);
-			float result = (m_endTime.QuadPart - m_startTime.QuadPart) * 1000.0f / m_frequency.QuadPart;
-			result /= 1000.0f;
-			return result;
+			return result / 10000000.0f;
 		}
 	private:
 		LARGE_INTEGER m_startTime;
