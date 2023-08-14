@@ -1,5 +1,5 @@
 # Coursework 2022
-You MUST use this repo to submit your coursework.
+# Coursework 2022
+Didn't get the camera working so, unfortunately, no controls. 
 
-When you clone make sure you use recurse submodules.
-This is a tick box in visual studio or use the option --recurse-submodules at the command prompt.
+You can change the speed at which the models spin by going to line 363 and changing the float 'constant'. 
