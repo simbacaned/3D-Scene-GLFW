@@ -51,6 +51,7 @@ namespace Engine {
 #pragma endregion
 	// Set static vars
 	Application* Application::s_instance = nullptr;
+	CameraControllerEuler* eulerCamera;
 
 	Application::Application()
 	{
@@ -94,6 +95,8 @@ namespace Engine {
 		m_window->getEventHandler().setOnMouseButtonReleasedCallback(std::bind(&Application::onMouseButtonReleased, this, std::placeholders::_1));
 		m_window->getEventHandler().setOnMouseMovedCallback(std::bind(&Application::onMouseMoved, this, std::placeholders::_1));
 		m_window->getEventHandler().setOnMouseScrollCallback(std::bind(&Application::onMouseScroll, this, std::placeholders::_1));
+
+		InputPoller::setCurrentWindow(m_window->getNativeWindow());
 
 		// Reset the timer.
 		m_timer->reset();
@@ -319,13 +322,6 @@ namespace Engine {
 		numberTexture.reset(new OpenGLTexture("./assets/textures/numberCube.png"));
 #pragma endregion
 
-		glm::mat4 view = glm::lookAt(
-			glm::vec3(0.f, 0.f, 0.f),
-			glm::vec3(0.f, 0.f, -1.f),
-			glm::vec3(0.f, 1.f, 0.f)
-		);
-		glm::mat4 projection = glm::perspective(glm::radians(45.f), 1024.f / 800.f, 0.1f, 100.f);
-
 		glm::mat4 models[3];
 		models[0] = glm::translate(glm::mat4(1.0f), glm::vec3(-2.f, 0.f, -6.f));
 		models[1] = glm::translate(glm::mat4(1.0f), glm::vec3(0.f, 0.f, -6.f));
@@ -336,96 +332,92 @@ namespace Engine {
 
 		float timestep = 0.f;
 
+		FPSEulerCameraProps props;
+		CameraControllerEuler camera(props);
+		eulerCamera = &camera;
+
+		glEnable(GL_DEPTH_TEST);
+		glClearColor(1.0f, 0.0f, 1.0f, 1.0f);
+
 		while (m_running)
 		{
-			glm::mat4 view = glm::lookAt(
-				glm::vec3(0.f, 0.f, 0.f),
-				glm::vec3(0.f, 0.f, -1.f),
-				glm::vec3(0.f, 1.f, 0.f)
-			);
-			glm::mat4 projection = glm::perspective(glm::radians(45.f), 1024.f / 800.f, 0.1f, 100.f);
+			timestep = m_timer->reset();
 
-			glm::mat4 models[3];
-			models[0] = glm::translate(glm::mat4(1.0f), glm::vec3(-2.f, 0.f, -6.f));
-			models[1] = glm::translate(glm::mat4(1.0f), glm::vec3(0.f, 0.f, -6.f));
-			models[2] = glm::translate(glm::mat4(1.0f), glm::vec3(2.f, 0.f, -6.f));
+			// Do frame stuff
+			float constant = 5.0f;
+			for (auto& model : models) { model = glm::rotate(model, timestep * constant, glm::vec3(0.f, 1.0f, 0.f)); }
 
-			glEnable(GL_DEPTH_TEST);
-			glClearColor(1.0f, 0.0f, 1.0f, 1.0f);
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-			float timestep = 0.f;
+			glUseProgram(FCShader->getID());
+			pyramidVAO->bind();
 
-			while (m_running)
-			{
-				timestep = m_timer->reset();
+			GLuint uniformLocation;
 
-				// Do frame stuff
-				float constant = 5.0f;
-				for (auto& model : models) { model = glm::rotate(model, timestep * constant, glm::vec3(0.f, 1.0f, 0.f)); }
+			FCShader->uploadMat4("u_model", models[0]);
+			FCShader->uploadMat4("u_view", eulerCamera->getCamera().view);
+			FCShader->uploadMat4("u_projection", eulerCamera->getCamera().projection);
 
-				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+			//uniformLocation = glGetUniformLocation(FCShader->getID(), "u_model");
+			//glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(models[0])); // Must include <glm/gtc/type_ptr.hpp>
 
-				glUseProgram(FCShader->getID());
-				pyramidVAO->bind();
+			//uniformLocation = glGetUniformLocation(FCShader->getID(), "u_view");
+			//glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(view));
 
-				GLuint uniformLocation;
+			//uniformLocation = glGetUniformLocation(FCShader->getID(), "u_projection");
+			//glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(projection));
 
-				uniformLocation = glGetUniformLocation(FCShader->getID(), "u_model");
-				glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(models[0])); // Must include <glm/gtc/type_ptr.hpp>
+			glDrawElements(GL_TRIANGLES, pyramidVAO->getDrawCount(), GL_UNSIGNED_INT, nullptr);
 
-				uniformLocation = glGetUniformLocation(FCShader->getID(), "u_view");
-				glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(view));
+			glUseProgram(TPShader->getID());
+			cubeVAO->bind();
 
-				uniformLocation = glGetUniformLocation(FCShader->getID(), "u_projection");
-				glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(projection));
+			TPShader->uploadMat4("u_model", models[1]);
+			TPShader->uploadMat4("u_view", eulerCamera->getCamera().view);
+			TPShader->uploadMat4("u_projection", eulerCamera->getCamera().projection);
 
-				glDrawElements(GL_TRIANGLES, pyramidVAO->getDrawCount(), GL_UNSIGNED_INT, nullptr);
+			//uniformLocation = glGetUniformLocation(TPShader->getID(), "u_model");
+			//glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(models[1]));
 
-				glUseProgram(TPShader->getID());
-				cubeVAO->bind();
+			//uniformLocation = glGetUniformLocation(TPShader->getID(), "u_view");
+			//glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(view));
 
-				uniformLocation = glGetUniformLocation(TPShader->getID(), "u_model");
-				glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(models[1]));
+			//uniformLocation = glGetUniformLocation(TPShader->getID(), "u_projection");
+			//glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(projection));
 
-				uniformLocation = glGetUniformLocation(TPShader->getID(), "u_view");
-				glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(view));
+			uniformLocation = glGetUniformLocation(TPShader->getID(), "u_tint");
+			glUniform4f(uniformLocation, 1.0f, 1.0f, 1.0f, 1.0f);
 
-				uniformLocation = glGetUniformLocation(TPShader->getID(), "u_projection");
-				glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(projection));
+			uniformLocation = glGetUniformLocation(TPShader->getID(), "u_lightColour");
+			glUniform3f(uniformLocation, 1.0f, 1.0f, 1.0f);
 
-				uniformLocation = glGetUniformLocation(TPShader->getID(), "u_tint");
-				glUniform4f(uniformLocation, 1.0f, 1.0f, 1.0f, 1.0f);
+			uniformLocation = glGetUniformLocation(TPShader->getID(), "u_lightPos");
+			glUniform3f(uniformLocation, 1.0f, 4.0f, 6.0f);
 
-				uniformLocation = glGetUniformLocation(TPShader->getID(), "u_lightColour");
-				glUniform3f(uniformLocation, 1.0f, 1.0f, 1.0f);
+			uniformLocation = glGetUniformLocation(TPShader->getID(), "u_viewPos");
+			glUniform3f(uniformLocation, 0.0f, 0.0f, 0.0f);
 
-				uniformLocation = glGetUniformLocation(TPShader->getID(), "u_lightPos");
-				glUniform3f(uniformLocation, 1.0f, 4.0f, 6.0f);
+			uniformLocation = glGetUniformLocation(TPShader->getID(), "u_texData");
+			glUniform1i(uniformLocation, 0);
 
-				uniformLocation = glGetUniformLocation(TPShader->getID(), "u_viewPos");
-				glUniform3f(uniformLocation, 0.0f, 0.0f, 0.0f);
+			glBindTexture(GL_TEXTURE_2D, letterTexture->getID());
+			uniformLocation = glGetUniformLocation(TPShader->getID(), "u_texData");
+			glUniform1i(uniformLocation, 0);
 
-				uniformLocation = glGetUniformLocation(TPShader->getID(), "u_texData");
-				glUniform1i(uniformLocation, 0);
+			glDrawElements(GL_TRIANGLES, cubeVAO->getDrawCount(), GL_UNSIGNED_INT, nullptr);
 
-				glBindTexture(GL_TEXTURE_2D, letterTexture->getID());
-				uniformLocation = glGetUniformLocation(TPShader->getID(), "u_texData");
-				glUniform1i(uniformLocation, 0);
+			uniformLocation = glGetUniformLocation(TPShader->getID(), "u_model");
+			glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(models[2]));
 
-				glDrawElements(GL_TRIANGLES, cubeVAO->getDrawCount(), GL_UNSIGNED_INT, nullptr);
+			glBindTexture(GL_TEXTURE_2D, numberTexture->getID());
 
-				uniformLocation = glGetUniformLocation(TPShader->getID(), "u_model");
-				glUniformMatrix4fv(uniformLocation, 1, GL_FALSE, glm::value_ptr(models[2]));
+			glDrawElements(GL_TRIANGLES, cubeVAO->getDrawCount(), GL_UNSIGNED_INT, nullptr);
 
-				glBindTexture(GL_TEXTURE_2D, numberTexture->getID());
-
-				glDrawElements(GL_TRIANGLES, cubeVAO->getDrawCount(), GL_UNSIGNED_INT, nullptr);
-
-				//Frame stuff
-				m_window->onUpdate(timestep);
-			}
-
-			Log::info("Exiting");
+			//Frame stuff
+			eulerCamera->onUpdate(timestep);
+			m_window->onUpdate(timestep);
 		}
+
+		Log::info("Exiting");
 	}
 }

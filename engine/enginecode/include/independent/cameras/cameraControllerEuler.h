@@ -22,7 +22,7 @@ namespace Engine {
         float translationSpeed = 2.0f; /**< The translation speed of the camera. */
         float rotationSpeed = 2.0f; /**< The rotation speed of the camera. */
         float fovY = 45.0f; /**< The vertical field of view angle in degrees. */
-        float aspectRatio = 16.0f / 9.0f; /**< The aspect ratio of the camera. */
+        float aspectRatio = 4.0f / 3.0f; /**< The aspect ratio of the camera. */
         float nearClip = 0.1f; /**< The near clipping plane distance. */
         float farClip = 100.f; /**< The far clipping plane distance. */
     };
