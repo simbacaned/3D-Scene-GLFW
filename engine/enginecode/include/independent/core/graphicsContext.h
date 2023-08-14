@@ -7,19 +7,16 @@
  *********************************************************************/
 #pragma once
 
-namespace
+/**
+* @class GraphicsContext
+* @brief Abstract base class for graphics context interfaces.
+*/
+class GraphicsContext
 {
-	/**
-	* @class GraphicsContext
-	* @brief Abstract base class for graphics context interfaces.
-	*/
-	class GraphicsContext
-	{
-	public: 
-        /** @brief Initialize the graphics context.*/
-        virtual void init() = 0;
+public: 
+    /** @brief Initialize the graphics context.*/
+    virtual void init() = 0;
 
-        /** @brief Swap the front and back buffers.*/
-        virtual void swapBuffers() = 0;
-	};
-}
+    /** @brief Swap the front and back buffers.*/
+    virtual void swapBuffers() = 0;
+};

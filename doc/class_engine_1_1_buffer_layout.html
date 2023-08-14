@@ -53,17 +53,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Represents the layout of a buffer containing multiple elements.  
+ <a href="class_engine_1_1_buffer_layout.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a423edc89d8a014f5a6f57b118751f571"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_buffer_layout.html#a423edc89d8a014f5a6f57b118751f571">BufferLayout</a> ()</td></tr>
+<tr class="memdesc:a423edc89d8a014f5a6f57b118751f571"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for <a class="el" href="class_engine_1_1_buffer_layout.html" title="Represents the layout of a buffer containing multiple elements.">BufferLayout</a>.  <a href="class_engine_1_1_buffer_layout.html#a423edc89d8a014f5a6f57b118751f571">More...</a><br /></td></tr>
 <tr class="separator:a423edc89d8a014f5a6f57b118751f571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a578e07f0c044e771607dd912221302f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_buffer_layout.html#a578e07f0c044e771607dd912221302f4">BufferLayout</a> (const std::initializer_list&lt; <a class="el" href="class_engine_1_1_buffer_element.html">BufferElement</a> &gt; &amp;element)</td></tr>
-<tr class="separator:a578e07f0c044e771607dd912221302f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae883b2c73dd400b0c793a4e40ee32582"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_buffer_layout.html#ae883b2c73dd400b0c793a4e40ee32582">BufferLayout</a> (const std::initializer_list&lt; <a class="el" href="class_engine_1_1_buffer_element.html">BufferElement</a> &gt; &amp;elements, uint32_t stride=0)</td></tr>
+<tr class="memdesc:ae883b2c73dd400b0c793a4e40ee32582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_engine_1_1_buffer_layout.html" title="Represents the layout of a buffer containing multiple elements.">BufferLayout</a>.  <a href="class_engine_1_1_buffer_layout.html#ae883b2c73dd400b0c793a4e40ee32582">More...</a><br /></td></tr>
+<tr class="separator:ae883b2c73dd400b0c793a4e40ee32582"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a321b4ff29ecca1522664fa93809195"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_buffer_layout.html#a0a321b4ff29ecca1522664fa93809195">getStride</a> () const</td></tr>
+<tr class="memdesc:a0a321b4ff29ecca1522664fa93809195"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the stride value of the buffer layout.  <a href="class_engine_1_1_buffer_layout.html#a0a321b4ff29ecca1522664fa93809195">More...</a><br /></td></tr>
 <tr class="separator:a0a321b4ff29ecca1522664fa93809195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f97776f0868d52a474f6e1d12cb1003"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_buffer_layout.html#a7f97776f0868d52a474f6e1d12cb1003">addElement</a> (<a class="el" href="class_engine_1_1_buffer_element.html">BufferElement</a> element)</td></tr>
+<tr class="memdesc:a7f97776f0868d52a474f6e1d12cb1003"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a new <a class="el" href="class_engine_1_1_buffer_element.html" title="Represents an element in a buffer layout. The BufferElement class represents an element in a buffer l...">BufferElement</a> to the layout.  <a href="class_engine_1_1_buffer_layout.html#a7f97776f0868d52a474f6e1d12cb1003">More...</a><br /></td></tr>
 <tr class="separator:a7f97776f0868d52a474f6e1d12cb1003"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a410bbd1e038b7ce9a57997bc98f726"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="class_engine_1_1_buffer_element.html">BufferElement</a> &gt;::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_buffer_layout.html#a0a410bbd1e038b7ce9a57997bc98f726">begin</a> ()</td></tr>
 <tr class="separator:a0a410bbd1e038b7ce9a57997bc98f726"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -77,6 +84,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a7a1620f5e0fe99fc83b3cb5042b87af2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_buffer_layout.html#a7a1620f5e0fe99fc83b3cb5042b87af2">calcStrideAndOffset</a> ()</td></tr>
+<tr class="memdesc:a7a1620f5e0fe99fc83b3cb5042b87af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the stride and offset values for the elements in the layout.  <a href="class_engine_1_1_buffer_layout.html#a7a1620f5e0fe99fc83b3cb5042b87af2">More...</a><br /></td></tr>
 <tr class="separator:a7a1620f5e0fe99fc83b3cb5042b87af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -87,8 +95,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a936d2b7c78fd130ae23a34fcb17946b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00026">26</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
+<div class="textblock"><p>Represents the layout of a buffer containing multiple elements. </p>
+
+<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00049">49</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a423edc89d8a014f5a6f57b118751f571"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a423edc89d8a014f5a6f57b118751f571">&#9670;&nbsp;</a></span>BufferLayout() <span class="overload">[1/2]</span></h2>
@@ -113,12 +122,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00029">29</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
+<p>Default constructor for <a class="el" href="class_engine_1_1_buffer_layout.html" title="Represents the layout of a buffer containing multiple elements.">BufferLayout</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00055">55</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
 
 </div>
 </div>
-<a id="a578e07f0c044e771607dd912221302f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a578e07f0c044e771607dd912221302f4">&#9670;&nbsp;</a></span>BufferLayout() <span class="overload">[2/2]</span></h2>
+<a id="ae883b2c73dd400b0c793a4e40ee32582"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae883b2c73dd400b0c793a4e40ee32582">&#9670;&nbsp;</a></span>BufferLayout() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,8 +141,18 @@ Private Attributes</h2></td></tr>
           <td class="memname">Engine::BufferLayout::BufferLayout </td>
           <td>(</td>
           <td class="paramtype">const std::initializer_list&lt; <a class="el" href="class_engine_1_1_buffer_element.html">BufferElement</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>element</em></td><td>)</td>
+          <td class="paramname"><em>elements</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>stride</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -141,7 +162,16 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00030">30</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
+<p>Constructor for <a class="el" href="class_engine_1_1_buffer_layout.html" title="Represents the layout of a buffer containing multiple elements.">BufferLayout</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">elements</td><td>The initializer list of <a class="el" href="class_engine_1_1_buffer_element.html" title="Represents an element in a buffer layout. The BufferElement class represents an element in a buffer l...">BufferElement</a> objects. </td></tr>
+    <tr><td class="paramname">stride</td><td>The stride value for the layout. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00062">62</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
 
 </div>
 </div>
@@ -161,6 +191,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Add a new <a class="el" href="class_engine_1_1_buffer_element.html" title="Represents an element in a buffer layout. The BufferElement class represents an element in a buffer l...">BufferElement</a> to the layout. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">element</td><td>The <a class="el" href="class_engine_1_1_buffer_element.html" title="Represents an element in a buffer layout. The BufferElement class represents an element in a buffer l...">BufferElement</a> to be added. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p class="definition">Definition at line <a class="el" href="_open_g_l_vertex_buffer_8cpp_source.html#l00007">7</a> of file <a class="el" href="_open_g_l_vertex_buffer_8cpp_source.html">OpenGLVertexBuffer.cpp</a>.</p>
 
@@ -189,7 +227,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00033">33</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00080">80</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
 
 </div>
 </div>
@@ -216,7 +254,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00035">35</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00082">82</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
 
 </div>
 </div>
@@ -242,6 +280,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Calculate the stride and offset values for the elements in the layout. </p>
 
 <p class="definition">Definition at line <a class="el" href="_open_g_l_vertex_buffer_8cpp_source.html#l00016">16</a> of file <a class="el" href="_open_g_l_vertex_buffer_8cpp_source.html">OpenGLVertexBuffer.cpp</a>.</p>
 
@@ -270,7 +310,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00034">34</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00081">81</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
 
 </div>
 </div>
@@ -297,7 +337,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00036">36</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00083">83</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
 
 </div>
 </div>
@@ -324,7 +364,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00031">31</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
+<p>Get the stride value of the buffer layout. </p>
+<dl class="section return"><dt>Returns</dt><dd>The stride value. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00071">71</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
 
 </div>
 </div>
@@ -348,8 +391,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Collection of <a class="el" href="class_engine_1_1_buffer_element.html" title="Represents an element in a buffer layout. The BufferElement class represents an element in a buffer l...">BufferElement</a> objects in the layout. </p>
 
-<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00038">38</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00086">86</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
 
 </div>
 </div>
@@ -372,8 +416,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Stride value for the buffer layout. </p>
 
-<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00039">39</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="buffer_layout_8h_source.html#l00087">87</a> of file <a class="el" href="buffer_layout_8h_source.html">bufferLayout.h</a>.</p>
 
 </div>
 </div>

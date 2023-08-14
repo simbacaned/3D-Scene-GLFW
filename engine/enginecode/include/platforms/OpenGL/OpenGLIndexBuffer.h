@@ -8,6 +8,7 @@
 #pragma once
 
 #include <cstdint>
+#include "rendering/indexBuffer.h"
 
 namespace Engine
 {
@@ -15,7 +16,7 @@ namespace Engine
 	* @class OpenGLIndexBuffer
 	* @brief Represents an OpenGL index buffer used for rendering indexed geometry.
 	*/
-	class OpenGLIndexBuffer
+	class OpenGLIndexBuffer : public IndexBuffer
 	{
 	public:
 		/** @brief Destructor, responsible for cleaning up the OpenGL index buffer.*/

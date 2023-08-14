@@ -12,6 +12,7 @@
 #include "events/events.h"
 #include "events/eventHandler.h"
 #include "core/window.h"
+#include "cameras/cameraControllerEuler.h"
 
 namespace Engine {
 	/**
@@ -27,6 +28,7 @@ namespace Engine {
 		std::shared_ptr<Timer> m_timer;   /**< Shared pointer to the timer. */
 		std::shared_ptr<System> m_windowsSystem; /**< Shared pointer to the window system. */
 		std::shared_ptr<Window> m_window; /**< Shared pointer to the main application window. */
+		//std::shared_ptr<CameraControllerEuler> m_camera; /**< Shared pointer to the camera. */
 	private:
 		static Application* s_instance; /**< Static pointer to the application instance. */
 		bool m_running = true; /**< Flag indicating whether the application is running. */

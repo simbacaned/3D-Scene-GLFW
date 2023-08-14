@@ -53,6 +53,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Base class for key-related events.  
+ <a href="class_engine_1_1_key_event.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="keyboard_events_8h_source.html">keyboardEvents.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Engine::KeyEvent:</div>
@@ -60,31 +63,38 @@ Inheritance diagram for Engine::KeyEvent:</div>
  <div class="center">
   <img src="class_engine_1_1_key_event.png" usemap="#Engine::KeyEvent_map" alt=""/>
   <map id="Engine::KeyEvent_map" name="Engine::KeyEvent_map">
-<area href="class_engine_1_1_event.html" alt="Engine::Event" shape="rect" coords="86,0,249,24"/>
-<area href="class_engine_1_1_key_pressed_event.html" alt="Engine::KeyPressedEvent" shape="rect" coords="0,112,163,136"/>
-<area href="class_engine_1_1_key_released_event.html" alt="Engine::KeyReleasedEvent" shape="rect" coords="173,112,336,136"/>
+<area href="class_engine_1_1_event.html" title="Base class for event objects." alt="Engine::Event" shape="rect" coords="86,0,249,24"/>
+<area href="class_engine_1_1_key_pressed_event.html" title="Event representing a key being pressed." alt="Engine::KeyPressedEvent" shape="rect" coords="0,112,163,136"/>
+<area href="class_engine_1_1_key_released_event.html" title="Event representing a key being released." alt="Engine::KeyReleasedEvent" shape="rect" coords="173,112,336,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ee005465e710851654507ce451ff7de"><td class="memItemLeft" align="right" valign="top">int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_key_event.html#a7ee005465e710851654507ce451ff7de">getKeyCode</a> () const</td></tr>
+<tr class="memdesc:a7ee005465e710851654507ce451ff7de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the keycode of the key associated with the event.  <a href="class_engine_1_1_key_event.html#a7ee005465e710851654507ce451ff7de">More...</a><br /></td></tr>
 <tr class="separator:a7ee005465e710851654507ce451ff7de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06a61146e496a6eea447a62f4bf73643"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_key_event.html#a06a61146e496a6eea447a62f4bf73643">getCategoryFlags</a> () const override</td></tr>
+<tr class="memdesc:a06a61146e496a6eea447a62f4bf73643"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the category flags associated with the event.  <a href="class_engine_1_1_key_event.html#a06a61146e496a6eea447a62f4bf73643">More...</a><br /></td></tr>
 <tr class="separator:a06a61146e496a6eea447a62f4bf73643"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_engine_1_1_event"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_engine_1_1_event')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_engine_1_1_event.html">Engine::Event</a></td></tr>
 <tr class="memitem:a3cf52840d3dbdb7a56dee18dd56c094a inherit pub_methods_class_engine_1_1_event"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="namespace_engine.html#a77fa362c4492c2c28f1bd41256002f16">EventType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_event.html#a3cf52840d3dbdb7a56dee18dd56c094a">getEventType</a> () const =0</td></tr>
+<tr class="memdesc:a3cf52840d3dbdb7a56dee18dd56c094a inherit pub_methods_class_engine_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the type of the event.  <a href="class_engine_1_1_event.html#a3cf52840d3dbdb7a56dee18dd56c094a">More...</a><br /></td></tr>
 <tr class="separator:a3cf52840d3dbdb7a56dee18dd56c094a inherit pub_methods_class_engine_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a567dbec7ac0102867152648f672b0578 inherit pub_methods_class_engine_1_1_event"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_event.html#a567dbec7ac0102867152648f672b0578">handled</a> () const</td></tr>
+<tr class="memdesc:a567dbec7ac0102867152648f672b0578 inherit pub_methods_class_engine_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the event has been handled.  <a href="class_engine_1_1_event.html#a567dbec7ac0102867152648f672b0578">More...</a><br /></td></tr>
 <tr class="separator:a567dbec7ac0102867152648f672b0578 inherit pub_methods_class_engine_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2de2492837a1c99dd7d2aa075d67355a inherit pub_methods_class_engine_1_1_event"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_event.html#a2de2492837a1c99dd7d2aa075d67355a">handle</a> (bool isHandled)</td></tr>
+<tr class="memdesc:a2de2492837a1c99dd7d2aa075d67355a inherit pub_methods_class_engine_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the handled state of the event.  <a href="class_engine_1_1_event.html#a2de2492837a1c99dd7d2aa075d67355a">More...</a><br /></td></tr>
 <tr class="separator:a2de2492837a1c99dd7d2aa075d67355a inherit pub_methods_class_engine_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f63a2de5c1d0dde8d761207b09f6a6e inherit pub_methods_class_engine_1_1_event"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_event.html#a2f63a2de5c1d0dde8d761207b09f6a6e">isInCategory</a> (<a class="el" href="namespace_engine.html#a629eac9f8d060a1f7261a9b912e0fa77">EventCategory</a> category) const</td></tr>
+<tr class="memdesc:a2f63a2de5c1d0dde8d761207b09f6a6e inherit pub_methods_class_engine_1_1_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the event belongs to a specific category.  <a href="class_engine_1_1_event.html#a2f63a2de5c1d0dde8d761207b09f6a6e">More...</a><br /></td></tr>
 <tr class="separator:a2f63a2de5c1d0dde8d761207b09f6a6e inherit pub_methods_class_engine_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7f1f0b302277d770b9a60bcca6697fa2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_key_event.html#a7f1f0b302277d770b9a60bcca6697fa2">KeyEvent</a> (int32_t keycode)</td></tr>
+<tr class="memdesc:a7f1f0b302277d770b9a60bcca6697fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_engine_1_1_key_event.html" title="Base class for key-related events.">KeyEvent</a>.  <a href="class_engine_1_1_key_event.html#a7f1f0b302277d770b9a60bcca6697fa2">More...</a><br /></td></tr>
 <tr class="separator:a7f1f0b302277d770b9a60bcca6697fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -96,8 +106,9 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:abe5dac716f5d3bdf4b3fadfa0e625351 inherit pro_attribs_class_engine_1_1_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="keyboard_events_8h_source.html#l00007">7</a> of file <a class="el" href="keyboard_events_8h_source.html">keyboardEvents.h</a>.</p>
+<div class="textblock"><p>Base class for key-related events. </p>
+
+<p class="definition">Definition at line <a class="el" href="keyboard_events_8h_source.html#l00018">18</a> of file <a class="el" href="keyboard_events_8h_source.html">keyboardEvents.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7f1f0b302277d770b9a60bcca6697fa2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f1f0b302277d770b9a60bcca6697fa2">&#9670;&nbsp;</a></span>KeyEvent()</h2>
@@ -123,7 +134,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="keyboard_events_8h_source.html#l00010">10</a> of file <a class="el" href="keyboard_events_8h_source.html">keyboardEvents.h</a>.</p>
+<p>Constructor for <a class="el" href="class_engine_1_1_key_event.html" title="Base class for key-related events.">KeyEvent</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">keycode</td><td>The keycode of the pressed or released key. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="keyboard_events_8h_source.html#l00025">25</a> of file <a class="el" href="keyboard_events_8h_source.html">keyboardEvents.h</a>.</p>
 
 </div>
 </div>
@@ -151,9 +170,12 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Get the category flags associated with the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>The category flags, including EventCategoryKeyboard and EventCategoryInput. </dd></dl>
+
 <p>Implements <a class="el" href="class_engine_1_1_event.html#a47872b38f4549404e37dbb5d94f0fadf">Engine::Event</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="keyboard_events_8h_source.html#l00014">14</a> of file <a class="el" href="keyboard_events_8h_source.html">keyboardEvents.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="keyboard_events_8h_source.html#l00039">39</a> of file <a class="el" href="keyboard_events_8h_source.html">keyboardEvents.h</a>.</p>
 
 </div>
 </div>
@@ -180,7 +202,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="keyboard_events_8h_source.html#l00013">13</a> of file <a class="el" href="keyboard_events_8h_source.html">keyboardEvents.h</a>.</p>
+<p>Get the keycode of the key associated with the event. </p>
+<dl class="section return"><dt>Returns</dt><dd>The keycode of the key. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="keyboard_events_8h_source.html#l00033">33</a> of file <a class="el" href="keyboard_events_8h_source.html">keyboardEvents.h</a>.</p>
 
 </div>
 </div>
@@ -204,8 +229,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The keycode of the pressed or released key. </p>
 
-<p class="definition">Definition at line <a class="el" href="keyboard_events_8h_source.html#l00011">11</a> of file <a class="el" href="keyboard_events_8h_source.html">keyboardEvents.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="keyboard_events_8h_source.html#l00027">27</a> of file <a class="el" href="keyboard_events_8h_source.html">keyboardEvents.h</a>.</p>
 
 </div>
 </div>

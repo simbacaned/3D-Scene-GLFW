@@ -27,7 +27,7 @@ namespace Engine
 		}
 
 		// Store the final calculated stride (total size of the layout) in m_stride.
-		m_stride = l_offset;
+		if (m_stride == 0) m_stride = l_offset;
 	}
 
 	OpenGLVertexBuffer::~OpenGLVertexBuffer()

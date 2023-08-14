@@ -1,3 +1,10 @@
+/*****************************************************************//**
+@file   winTimer.h
+@brief  Windows specific timer which use queryPerformanceCount
+
+@author Joseph-Cossins-Smith
+@date   July 2023
+ *********************************************************************/
 #pragma once
 
 #include <Windows.h>
@@ -5,29 +12,44 @@
 #include <iostream>
 namespace Engine
 {
-	/** \class WinTimer
-	* Windows specific timer which use queryPerformanceCount
-	*/
-	class WinTimer : public Timer
-	{
-	public:
-		virtual void start() override 
-		{
-			QueryPerformanceFrequency(&m_frequency);
-			QueryPerformanceCounter(&m_startTime);
-		};
+    /** @brief Class representing a high-resolution timer on Windows platform. */
+    class WinTimer : public Timer
+    {
+    public:
+        /**
+        * @brief Start the timer.
+        * Initializes the timer by capturing the current timestamp.
+        */
+        virtual void start() override
+        {
+            QueryPerformanceFrequency(&m_frequency);
+            QueryPerformanceCounter(&m_startTime);
+        };
 
-		virtual inline float reset() override { QueryPerformanceCounter(&m_startTime); return getTimeElapsed(); };
+        /**
+        * @brief Reset the timer.
+        * Resets the timer by capturing the current timestamp and returning the elapsed time.
+        *
+        * @return The elapsed time in seconds since the last reset.
+        */
+        virtual inline float reset() override { QueryPerformanceCounter(&m_startTime); return getTimeElapsed(); };
 
-		virtual float getTimeElapsed() override
-		{
-			float result = m_startTime.QuadPart - m_endTime.QuadPart;
-			QueryPerformanceCounter(&m_endTime);
-			return result / 10000000.0f;
-		}
-	private:
-		LARGE_INTEGER m_startTime;
-		LARGE_INTEGER m_endTime;
-		LARGE_INTEGER m_frequency;
-	};
+        /**
+        * @brief Get the elapsed time.
+        * Returns the time elapsed since the last reset or start operation.
+        *
+        * @return The elapsed time in seconds.
+        */
+        virtual float getTimeElapsed() override
+        {
+            float result = m_startTime.QuadPart - m_endTime.QuadPart;
+            QueryPerformanceCounter(&m_endTime);
+            return result / 10000000.0f;
+        }
+
+    private:
+        LARGE_INTEGER m_startTime;   /**< The start time captured using QueryPerformanceCounter. */
+        LARGE_INTEGER m_endTime;     /**< The end time captured using QueryPerformanceCounter. */
+        LARGE_INTEGER m_frequency;   /**< The frequency of the high-resolution timer. */
+    };
 }

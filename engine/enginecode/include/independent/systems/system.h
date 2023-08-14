@@ -1,23 +1,38 @@
-/** \file system.h
-*/
+/*****************************************************************//**
+@file   system.h
+@brief  This class serves as a foundation for various system components that need to be managed during the execution of the application
 
+@author Joseph-Cossins-Smith
+@date   July 2023
+ *********************************************************************/
 #pragma once
 
 #include <cstdarg>
 
-/**
-\class Interface class for all systems
-*/
 
 namespace Engine {
 
-	enum class SystemSignal { None = 0 };
+    /** @brief Enumeration of system signals. */
+    enum class SystemSignal { None = 0 };
 
-	class System
-	{
-	public:
-		virtual ~System() {};
-		virtual void start(SystemSignal init = SystemSignal::None, ...) = 0; //!< Start the system
-		virtual void stop(SystemSignal close = SystemSignal::None, ...) = 0; //!< Stop the system
-	};
+    /** @brief Base class for system components. */
+    class System
+    {
+    public:
+        virtual ~System() {};
+
+        /**
+        * @brief Start the system.
+        * @param init The initialization signal (default is SystemSignal::None).
+        * @param ... Additional arguments for specific system start.
+        */
+        virtual void start(SystemSignal init = SystemSignal::None, ...) = 0;
+
+        /**
+        * @brief Stop the system.
+        * @param close The closing signal (default is SystemSignal::None).
+        * @param ... Additional arguments for specific system stop.
+        */
+        virtual void stop(SystemSignal close = SystemSignal::None, ...) = 0;
+    };
 }

@@ -16,6 +16,10 @@ namespace Engine
 			case ShaderDataType::Float2: return GL_FLOAT;   // Convert Float2 to GL_FLOAT
 			case ShaderDataType::Float3: return GL_FLOAT;   // Convert Float3 to GL_FLOAT
 			case ShaderDataType::Float4: return GL_FLOAT;   // Convert Float4 to GL_FLOAT
+			case ShaderDataType::Short:  return GL_SHORT;   // Convert Short to GL_SHORT
+			case ShaderDataType::Short2: return GL_SHORT;   // Convert Short2 to GL_SHORT
+			case ShaderDataType::Short3: return GL_SHORT;   // Convert Short3 to GL_SHORT
+			case ShaderDataType::Short4: return GL_SHORT;   // Convert Short4 to GL_SHORT
 			default: return GL_INVALID_ENUM;                // Return GL_INVALID_ENUM for unsupported types
 			}
 		}
@@ -76,7 +80,7 @@ namespace Engine
 	}
 
 	// Method to set the index buffer for the vertex array.
-	void OpenGLVertexArray::setIndexBuffer(const std::shared_ptr<OpenGLIndexBuffer>& indexBuffer)
+	void OpenGLVertexArray::setIndexBuffer(const std::shared_ptr<IndexBuffer>& indexBuffer)
 	{
 		// Store the provided index buffer in the member variable m_indexBuffer.
 		m_indexBuffer = indexBuffer;

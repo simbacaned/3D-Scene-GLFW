@@ -50,6 +50,9 @@ $(function() {
 <div class="title">windowsEvent.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Serves as the base class for events related to mouse window interactions.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="event_8h_source.html">event.h</a>&quot;</code><br />
 <code>#include &lt;glm/glm.hpp&gt;</code><br />
 </div>
@@ -58,14 +61,19 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_window_close_event.html">Engine::WindowCloseEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_engine_1_1_event.html" title="Base class for event objects.">Event</a> representing the window close action. The <a class="el" href="class_engine_1_1_window_close_event.html" title="Event representing the window close action. The WindowCloseEvent class represents an event triggered ...">WindowCloseEvent</a> class represents an event triggered when the window is being closed.  <a href="class_engine_1_1_window_close_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_window_resize_event.html">Engine::WindowResizeEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_engine_1_1_event.html" title="Base class for event objects.">Event</a> representing the window resize action. The <a class="el" href="class_engine_1_1_window_resize_event.html" title="Event representing the window resize action. The WindowResizeEvent class represents an event triggere...">WindowResizeEvent</a> class represents an event triggered when the window is resized. It provides information about the new dimensions of the window.  <a href="class_engine_1_1_window_resize_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_window_focus_event.html">Engine::WindowFocusEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_engine_1_1_event.html" title="Base class for event objects.">Event</a> representing the window focus action. The <a class="el" href="class_engine_1_1_window_focus_event.html" title="Event representing the window focus action. The WindowFocusEvent class represents an event triggered ...">WindowFocusEvent</a> class represents an event triggered when the window gains focus. It indicates that the window has become the active and focused window.  <a href="class_engine_1_1_window_focus_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_window_lost_focus_event.html">Engine::WindowLostFocusEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_engine_1_1_event.html" title="Base class for event objects.">Event</a> representing the window lost focus action. The <a class="el" href="class_engine_1_1_window_lost_focus_event.html" title="Event representing the window lost focus action. The WindowLostFocusEvent class represents an event t...">WindowLostFocusEvent</a> class represents an event triggered when the window loses focus. It indicates that the window is no longer the active and focused window.  <a href="class_engine_1_1_window_lost_focus_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_window_moved_event.html">Engine::WindowMovedEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_engine_1_1_event.html" title="Base class for event objects.">Event</a> representing the window moved action. The <a class="el" href="class_engine_1_1_window_moved_event.html" title="Event representing the window moved action. The WindowMovedEvent class represents an event triggered ...">WindowMovedEvent</a> class represents an event triggered when the window is moved. It provides the new position of the window after the move.  <a href="class_engine_1_1_window_moved_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -73,7 +81,13 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespace_engine"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_engine.html">Engine</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-</div><!-- contents -->
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Serves as the base class for events related to mouse window interactions. </p>
+<dl class="section author"><dt>Author</dt><dd>Joseph-Cossins-Smith </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>July 2023 </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="windows_event_8h_source.html">windowsEvent.h</a>.</p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
