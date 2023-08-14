@@ -48,15 +48,30 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Base class for camera controllers.  
+ <a href="class_camera_controller.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="camera_controller_8h_source.html">cameraController.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for CameraController:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_camera_controller.png" usemap="#CameraController_map" alt=""/>
+  <map id="CameraController_map" name="CameraController_map">
+<area href="class_engine_1_1_camera_controller_euler.html" title="Euler angle-based FPS camera controller. This class provides a camera controller using Euler angles f..." alt="Engine::CameraControllerEuler" shape="rect" coords="0,56,187,80"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0bf52bbdff6255f94c5b0ecd8d0bf32b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_camera.html">Camera</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_controller.html#a0bf52bbdff6255f94c5b0ecd8d0bf32b">getCamera</a> ()</td></tr>
+<tr class="memdesc:a0bf52bbdff6255f94c5b0ecd8d0bf32b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the camera managed by the controller.  <a href="class_camera_controller.html#a0bf52bbdff6255f94c5b0ecd8d0bf32b">More...</a><br /></td></tr>
 <tr class="separator:a0bf52bbdff6255f94c5b0ecd8d0bf32b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef87864e4dce80b2a588a5a432645014"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_controller.html#aef87864e4dce80b2a588a5a432645014">onUpdate</a> (float t)</td></tr>
+<tr class="memdesc:aef87864e4dce80b2a588a5a432645014"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for updating the camera controller.  <a href="class_camera_controller.html#aef87864e4dce80b2a588a5a432645014">More...</a><br /></td></tr>
 <tr class="separator:aef87864e4dce80b2a588a5a432645014"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad731e7b11df8158f141cc37f869177ab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera_controller.html#ad731e7b11df8158f141cc37f869177ab">onResize</a> (<a class="el" href="class_engine_1_1_window_resize_event.html">Engine::WindowResizeEvent</a> &amp;e)</td></tr>
+<tr class="memdesc:ad731e7b11df8158f141cc37f869177ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback for handling window resize events.  <a href="class_camera_controller.html#ad731e7b11df8158f141cc37f869177ab">More...</a><br /></td></tr>
 <tr class="separator:ad731e7b11df8158f141cc37f869177ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -65,8 +80,9 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:aeb26c9e6408a4ba285be776ab15a14cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="camera_controller_8h_source.html#l00013">13</a> of file <a class="el" href="camera_controller_8h_source.html">cameraController.h</a>.</p>
+<div class="textblock"><p>Base class for camera controllers. </p>
+
+<p class="definition">Definition at line <a class="el" href="camera_controller_8h_source.html#l00017">17</a> of file <a class="el" href="camera_controller_8h_source.html">cameraController.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0bf52bbdff6255f94c5b0ecd8d0bf32b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0bf52bbdff6255f94c5b0ecd8d0bf32b">&#9670;&nbsp;</a></span>getCamera()</h2>
@@ -91,7 +107,10 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="camera_controller_8h_source.html#l00016">16</a> of file <a class="el" href="camera_controller_8h_source.html">cameraController.h</a>.</p>
+<p>Get the camera managed by the controller. </p>
+<dl class="section return"><dt>Returns</dt><dd>A reference to the camera managed by the controller. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="camera_controller_8h_source.html#l00024">24</a> of file <a class="el" href="camera_controller_8h_source.html">cameraController.h</a>.</p>
 
 </div>
 </div>
@@ -119,7 +138,15 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="camera_controller_8h_source.html#l00018">18</a> of file <a class="el" href="camera_controller_8h_source.html">cameraController.h</a>.</p>
+<p>Callback for handling window resize events. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">e</td><td>The window resize event. Subclasses can override this function to handle window resize events affecting the camera. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="camera_controller_8h_source.html#l00038">38</a> of file <a class="el" href="camera_controller_8h_source.html">cameraController.h</a>.</p>
 
 </div>
 </div>
@@ -147,7 +174,17 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="camera_controller_8h_source.html#l00017">17</a> of file <a class="el" href="camera_controller_8h_source.html">cameraController.h</a>.</p>
+<p>Callback for updating the camera controller. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>The time elapsed since the last update. Subclasses can override this function to update the camera controller's behavior. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="class_engine_1_1_camera_controller_euler.html#abe0365fc42b7f08504968a511d2d3c9a">Engine::CameraControllerEuler</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="camera_controller_8h_source.html#l00031">31</a> of file <a class="el" href="camera_controller_8h_source.html">cameraController.h</a>.</p>
 
 </div>
 </div>
@@ -171,8 +208,9 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The camera managed by the controller. </p>
 
-<p class="definition">Definition at line <a class="el" href="camera_controller_8h_source.html#l00018">18</a> of file <a class="el" href="camera_controller_8h_source.html">cameraController.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="camera_controller_8h_source.html#l00041">41</a> of file <a class="el" href="camera_controller_8h_source.html">cameraController.h</a>.</p>
 
 </div>
 </div>

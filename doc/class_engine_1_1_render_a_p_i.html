@@ -53,6 +53,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Provides an interface to determine the rendering API in use.  
+ <a href="class_engine_1_1_render_a_p_i.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="render_a_p_i_8h_source.html">renderAPI.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -62,21 +65,25 @@ Public Types</h2></td></tr>
 <a class="el" href="class_engine_1_1_render_a_p_i.html#a6e68fd9ccfd392fee22ad0623729ecffae5054d13a102957ce58cbb9cbba107d7">API::Direct3D</a> = 2, 
 <a class="el" href="class_engine_1_1_render_a_p_i.html#a6e68fd9ccfd392fee22ad0623729ecffa38625270231b647116c80bcbc4f9d1d8">API::Vulkan</a> = 3
  }</td></tr>
+<tr class="memdesc:a6e68fd9ccfd392fee22ad0623729ecff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumerates different rendering APIs.  <a href="class_engine_1_1_render_a_p_i.html#a6e68fd9ccfd392fee22ad0623729ecff">More...</a><br /></td></tr>
 <tr class="separator:a6e68fd9ccfd392fee22ad0623729ecff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a26d10223697446899204fcbcebb721d0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_engine_1_1_render_a_p_i.html#a6e68fd9ccfd392fee22ad0623729ecff">API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_render_a_p_i.html#a26d10223697446899204fcbcebb721d0">getAPI</a> ()</td></tr>
+<tr class="memdesc:a26d10223697446899204fcbcebb721d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current rendering API.  <a href="class_engine_1_1_render_a_p_i.html#a26d10223697446899204fcbcebb721d0">More...</a><br /></td></tr>
 <tr class="separator:a26d10223697446899204fcbcebb721d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a3084181f75decfa977445aa7923d6287"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_engine_1_1_render_a_p_i.html#a6e68fd9ccfd392fee22ad0623729ecff">API</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_render_a_p_i.html#a3084181f75decfa977445aa7923d6287">s_API</a> = <a class="el" href="class_engine_1_1_render_a_p_i.html#a6e68fd9ccfd392fee22ad0623729ecffa760716b590ee7c0adc25f434f577d8be">RenderAPI::API::OpenGL</a></td></tr>
+<tr class="memdesc:a3084181f75decfa977445aa7923d6287"><td class="mdescLeft">&#160;</td><td class="mdescRight">The static member variable to store the current rendering API.  <a href="class_engine_1_1_render_a_p_i.html#a3084181f75decfa977445aa7923d6287">More...</a><br /></td></tr>
 <tr class="separator:a3084181f75decfa977445aa7923d6287"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="render_a_p_i_8h_source.html#l00005">5</a> of file <a class="el" href="render_a_p_i_8h_source.html">renderAPI.h</a>.</p>
+<div class="textblock"><p>Provides an interface to determine the rendering API in use. </p>
+
+<p class="definition">Definition at line <a class="el" href="render_a_p_i_8h_source.html#l00016">16</a> of file <a class="el" href="render_a_p_i_8h_source.html">renderAPI.h</a>.</p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a6e68fd9ccfd392fee22ad0623729ecff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6e68fd9ccfd392fee22ad0623729ecff">&#9670;&nbsp;</a></span>API</h2>
@@ -97,6 +104,8 @@ Static Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Enumerates different rendering APIs. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a6e68fd9ccfd392fee22ad0623729ecffa6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a6e68fd9ccfd392fee22ad0623729ecffa760716b590ee7c0adc25f434f577d8be"></a>OpenGL&#160;</td><td class="fielddoc"></td></tr>
@@ -104,7 +113,7 @@ Static Private Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="a6e68fd9ccfd392fee22ad0623729ecffa38625270231b647116c80bcbc4f9d1d8"></a>Vulkan&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="render_a_p_i_8h_source.html#l00008">8</a> of file <a class="el" href="render_a_p_i_8h_source.html">renderAPI.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="render_a_p_i_8h_source.html#l00023">23</a> of file <a class="el" href="render_a_p_i_8h_source.html">renderAPI.h</a>.</p>
 
 </div>
 </div>
@@ -132,7 +141,10 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="render_a_p_i_8h_source.html#l00009">9</a> of file <a class="el" href="render_a_p_i_8h_source.html">renderAPI.h</a>.</p>
+<p>Get the current rendering API. </p>
+<dl class="section return"><dt>Returns</dt><dd>The API enum value representing the rendering API in use. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="render_a_p_i_8h_source.html#l00029">29</a> of file <a class="el" href="render_a_p_i_8h_source.html">renderAPI.h</a>.</p>
 
 </div>
 </div>
@@ -157,13 +169,15 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="render_a_p_i_8h_source.html#l00011">11</a> of file <a class="el" href="render_a_p_i_8h_source.html">renderAPI.h</a>.</p>
+<p>The static member variable to store the current rendering API. </p>
+
+<p class="definition">Definition at line <a class="el" href="render_a_p_i_8h_source.html#l00036">36</a> of file <a class="el" href="render_a_p_i_8h_source.html">renderAPI.h</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>engine/enginecode/include/independent/rendering/<a class="el" href="render_a_p_i_8h_source.html">renderAPI.h</a></li>
-<li>engine/enginecode/src/independent/rendering/<a class="el" href="rendering_2application_8cpp_source.html">application.cpp</a></li>
+<li>engine/enginecode/src/independent/rendering/<a class="el" href="render_a_p_i_8cpp_source.html">renderAPI.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

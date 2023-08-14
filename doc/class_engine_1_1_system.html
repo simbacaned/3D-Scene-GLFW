@@ -51,6 +51,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Base class for system components.  
+ <a href="class_engine_1_1_system.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="system_8h_source.html">system.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Engine::System:</div>
@@ -58,8 +61,8 @@ Inheritance diagram for Engine::System:</div>
  <div class="center">
   <img src="class_engine_1_1_system.png" usemap="#Engine::System_map" alt=""/>
   <map id="Engine::System_map" name="Engine::System_map">
-<area href="class_engine_1_1_g_l_f_w_system.html" alt="Engine::GLFWSystem" shape="rect" coords="0,56,132,80"/>
-<area href="class_engine_1_1_log.html" alt="Engine::Log" shape="rect" coords="142,56,274,80"/>
+<area href="class_engine_1_1_g_l_f_w_system.html" title="Represents the GLFW-based System in the application. This class provides the implementation for initi..." alt="Engine::GLFWSystem" shape="rect" coords="0,56,132,80"/>
+<area href="class_engine_1_1_log.html" title="Provides logging functionality using spdlog." alt="Engine::Log" shape="rect" coords="142,56,274,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -75,8 +78,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a42c92dca4ba99d16bc5f117460d712a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="system_8h_source.html#l00016">16</a> of file <a class="el" href="system_8h_source.html">system.h</a>.</p>
+<div class="textblock"><p>Base class for system components. </p>
+
+<p class="definition">Definition at line <a class="el" href="system_8h_source.html#l00019">19</a> of file <a class="el" href="system_8h_source.html">system.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4ed810746929ee960ea5fa6648230c48"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ed810746929ee960ea5fa6648230c48">&#9670;&nbsp;</a></span>~System()</h2>
@@ -101,7 +105,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="system_8h_source.html#l00019">19</a> of file <a class="el" href="system_8h_source.html">system.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="system_8h_source.html#l00022">22</a> of file <a class="el" href="system_8h_source.html">system.h</a>.</p>
 
 </div>
 </div>
@@ -141,6 +145,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Start the system. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">init</td><td>The initialization signal (default is <a class="el" href="namespace_engine.html#a3779187ef31b30930abda7fbea542e17a6adf97f83acf6453d4a6a4b1070f3754">SystemSignal::None</a>). </td></tr>
+    <tr><td class="paramname">...</td><td>Additional arguments for specific system start. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="class_engine_1_1_g_l_f_w_system.html#aae504f2b517b38e81eb8da5522dac53e">Engine::GLFWSystem</a>, and <a class="el" href="class_engine_1_1_log.html#aff9263847a91687768e7508c6e54f3d1">Engine::Log</a>.</p>
 
@@ -181,6 +192,13 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Stop the system. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">close</td><td>The closing signal (default is <a class="el" href="namespace_engine.html#a3779187ef31b30930abda7fbea542e17a6adf97f83acf6453d4a6a4b1070f3754">SystemSignal::None</a>). </td></tr>
+    <tr><td class="paramname">...</td><td>Additional arguments for specific system stop. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implemented in <a class="el" href="class_engine_1_1_g_l_f_w_system.html#a712aca583e026cc92a2bc86406439385">Engine::GLFWSystem</a>, and <a class="el" href="class_engine_1_1_log.html#a012e7fc3c8c874d4d0beee4bb164595e">Engine::Log</a>.</p>
 

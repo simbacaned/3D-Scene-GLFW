@@ -360,7 +360,8 @@ namespace Engine {
 				timestep = m_timer->reset();
 
 				// Do frame stuff
-				for (auto& model : models) { model = glm::rotate(model, timestep, glm::vec3(0.f, 1.0, 0.f)); }
+				float constant = 5.0f;
+				for (auto& model : models) { model = glm::rotate(model, timestep * constant, glm::vec3(0.f, 1.0f, 0.f)); }
 
 				glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 

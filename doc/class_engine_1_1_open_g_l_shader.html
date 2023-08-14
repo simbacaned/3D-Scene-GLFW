@@ -53,17 +53,24 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Class representing an OpenGL shader.  
+ <a href="class_engine_1_1_open_g_l_shader.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_open_g_l_shader_8h_source.html">OpenGLShader.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afb0389ce0e7810679847dee016d00af5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_open_g_l_shader.html#afb0389ce0e7810679847dee016d00af5">OpenGLShader</a> (const char *vertexFilepath, const char *fragmentFilepath)</td></tr>
+<tr class="memdesc:afb0389ce0e7810679847dee016d00af5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_engine_1_1_open_g_l_shader.html" title="Class representing an OpenGL shader.">OpenGLShader</a>. Constructs an OpenGL shader by compiling and linking the provided vertex and fragment shader files.  <a href="class_engine_1_1_open_g_l_shader.html#afb0389ce0e7810679847dee016d00af5">More...</a><br /></td></tr>
 <tr class="separator:afb0389ce0e7810679847dee016d00af5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cc481902cb276f303e255da5ad21f84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_open_g_l_shader.html#a1cc481902cb276f303e255da5ad21f84">OpenGLShader</a> (const char *filepath)</td></tr>
+<tr class="memdesc:a1cc481902cb276f303e255da5ad21f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for <a class="el" href="class_engine_1_1_open_g_l_shader.html" title="Class representing an OpenGL shader.">OpenGLShader</a>. Constructs an OpenGL shader by compiling and linking the shader from the provided file.  <a href="class_engine_1_1_open_g_l_shader.html#a1cc481902cb276f303e255da5ad21f84">More...</a><br /></td></tr>
 <tr class="separator:a1cc481902cb276f303e255da5ad21f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b79a0afbd666684d3f9d8b56e8a65f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_open_g_l_shader.html#a6b79a0afbd666684d3f9d8b56e8a65f9">~OpenGLShader</a> ()</td></tr>
+<tr class="memdesc:a6b79a0afbd666684d3f9d8b56e8a65f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for <a class="el" href="class_engine_1_1_open_g_l_shader.html" title="Class representing an OpenGL shader.">OpenGLShader</a>. Cleans up resources associated with the OpenGL shader.  <a href="class_engine_1_1_open_g_l_shader.html#a6b79a0afbd666684d3f9d8b56e8a65f9">More...</a><br /></td></tr>
 <tr class="separator:a6b79a0afbd666684d3f9d8b56e8a65f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3745362dd8af5a1ea559e716c862d6a3"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_open_g_l_shader.html#a3745362dd8af5a1ea559e716c862d6a3">getID</a> ()</td></tr>
+<tr class="memdesc:a3745362dd8af5a1ea559e716c862d6a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the ID of the OpenGL shader.  <a href="class_engine_1_1_open_g_l_shader.html#a3745362dd8af5a1ea559e716c862d6a3">More...</a><br /></td></tr>
 <tr class="separator:a3745362dd8af5a1ea559e716c862d6a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaad86e2c97a05c9119f635a2af2a4613"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_open_g_l_shader.html#aaad86e2c97a05c9119f635a2af2a4613">uploadInt</a> (const char *name, int value)</td></tr>
 <tr class="separator:aaad86e2c97a05c9119f635a2af2a4613"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -81,6 +88,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a3069a6215c44a4efd45d9f818b6c6a11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_open_g_l_shader.html#a3069a6215c44a4efd45d9f818b6c6a11">compileAndLink</a> (const char *vertexShaderSrc, const char *fragmentShaderSrc)</td></tr>
+<tr class="memdesc:a3069a6215c44a4efd45d9f818b6c6a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compile and link the shader from source code. This private method compiles and links the shader using the provided vertex and fragment shader source code.  <a href="class_engine_1_1_open_g_l_shader.html#a3069a6215c44a4efd45d9f818b6c6a11">More...</a><br /></td></tr>
 <tr class="separator:a3069a6215c44a4efd45d9f818b6c6a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -89,8 +97,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:af23d410649b809ed8738583d18e8d1a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_open_g_l_shader_8h_source.html#l00014">14</a> of file <a class="el" href="_open_g_l_shader_8h_source.html">OpenGLShader.h</a>.</p>
+<div class="textblock"><p>Class representing an OpenGL shader. </p>
+
+<p class="definition">Definition at line <a class="el" href="_open_g_l_shader_8h_source.html#l00015">15</a> of file <a class="el" href="_open_g_l_shader_8h_source.html">OpenGLShader.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afb0389ce0e7810679847dee016d00af5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb0389ce0e7810679847dee016d00af5">&#9670;&nbsp;</a></span>OpenGLShader() <span class="overload">[1/2]</span></h2>
@@ -118,6 +127,15 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor for <a class="el" href="class_engine_1_1_open_g_l_shader.html" title="Class representing an OpenGL shader.">OpenGLShader</a>. Constructs an OpenGL shader by compiling and linking the provided vertex and fragment shader files. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertexFilepath</td><td>Path to the vertex shader file. </td></tr>
+    <tr><td class="paramname">fragmentFilepath</td><td>Path to the fragment shader file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_open_g_l_shader_8cpp_source.html#l00012">12</a> of file <a class="el" href="_open_g_l_shader_8cpp_source.html">OpenGLShader.cpp</a>.</p>
 
 </div>
@@ -138,6 +156,14 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor for <a class="el" href="class_engine_1_1_open_g_l_shader.html" title="Class representing an OpenGL shader.">OpenGLShader</a>. Constructs an OpenGL shader by compiling and linking the shader from the provided file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>Path to the shader file. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_open_g_l_shader_8cpp_source.html#l00043">43</a> of file <a class="el" href="_open_g_l_shader_8cpp_source.html">OpenGLShader.cpp</a>.</p>
 
 </div>
@@ -156,6 +182,8 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destructor for <a class="el" href="class_engine_1_1_open_g_l_shader.html" title="Class representing an OpenGL shader.">OpenGLShader</a>. Cleans up resources associated with the OpenGL shader. </p>
 
 <p class="definition">Definition at line <a class="el" href="_open_g_l_shader_8cpp_source.html#l00074">74</a> of file <a class="el" href="_open_g_l_shader_8cpp_source.html">OpenGLShader.cpp</a>.</p>
 
@@ -196,6 +224,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Compile and link the shader from source code. This private method compiles and links the shader using the provided vertex and fragment shader source code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vertexShaderSrc</td><td>Vertex shader source code. </td></tr>
+    <tr><td class="paramname">fragmentShaderSrc</td><td>Fragment shader source code. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="_open_g_l_shader_8cpp_source.html#l00115">115</a> of file <a class="el" href="_open_g_l_shader_8cpp_source.html">OpenGLShader.cpp</a>.</p>
 
 </div>
@@ -223,7 +260,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_open_g_l_shader_8h_source.html#l00020">20</a> of file <a class="el" href="_open_g_l_shader_8h_source.html">OpenGLShader.h</a>.</p>
+<p>Get the ID of the OpenGL shader. </p>
+<dl class="section return"><dt>Returns</dt><dd>The OpenGL shader ID. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_open_g_l_shader_8h_source.html#l00047">47</a> of file <a class="el" href="_open_g_l_shader_8h_source.html">OpenGLShader.h</a>.</p>
 
 </div>
 </div>
@@ -427,8 +467,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The OpenGL shader ID. </p>
 
-<p class="definition">Definition at line <a class="el" href="_open_g_l_shader_8h_source.html#l00029">29</a> of file <a class="el" href="_open_g_l_shader_8h_source.html">OpenGLShader.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_open_g_l_shader_8h_source.html#l00059">59</a> of file <a class="el" href="_open_g_l_shader_8h_source.html">OpenGLShader.h</a>.</p>
 
 </div>
 </div>

@@ -48,23 +48,30 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a camera in 3D space.  
+ <a href="class_camera.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="camera_8h_source.html">camera.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abe39e28c2925fbdbeb9e3f43b7f39930"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#abe39e28c2925fbdbeb9e3f43b7f39930">updateView</a> (const glm::mat4 &amp;transform)</td></tr>
+<tr class="memdesc:abe39e28c2925fbdbeb9e3f43b7f39930"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the view matrix based on the given transformation.  <a href="class_camera.html#abe39e28c2925fbdbeb9e3f43b7f39930">More...</a><br /></td></tr>
 <tr class="separator:abe39e28c2925fbdbeb9e3f43b7f39930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:add93fedd6b9a6a6e2c784aeda624de83"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#add93fedd6b9a6a6e2c784aeda624de83">view</a></td></tr>
+<tr class="memdesc:add93fedd6b9a6a6e2c784aeda624de83"><td class="mdescLeft">&#160;</td><td class="mdescRight">The view matrix of the camera. The view matrix transforms coordinates from world space to view space.  <a href="class_camera.html#add93fedd6b9a6a6e2c784aeda624de83">More...</a><br /></td></tr>
 <tr class="separator:add93fedd6b9a6a6e2c784aeda624de83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43555a0ae83f9ec696ee257e5fd48cf2"><td class="memItemLeft" align="right" valign="top">glm::mat4&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_camera.html#a43555a0ae83f9ec696ee257e5fd48cf2">projection</a></td></tr>
+<tr class="memdesc:a43555a0ae83f9ec696ee257e5fd48cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The projection matrix of the camera. The projection matrix transforms coordinates from view space to clip space.  <a href="class_camera.html#a43555a0ae83f9ec696ee257e5fd48cf2">More...</a><br /></td></tr>
 <tr class="separator:a43555a0ae83f9ec696ee257e5fd48cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="camera_8h_source.html#l00012">12</a> of file <a class="el" href="camera_8h_source.html">camera.h</a>.</p>
+<div class="textblock"><p>Represents a camera in 3D space. </p>
+
+<p class="definition">Definition at line <a class="el" href="camera_8h_source.html#l00016">16</a> of file <a class="el" href="camera_8h_source.html">camera.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="abe39e28c2925fbdbeb9e3f43b7f39930"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abe39e28c2925fbdbeb9e3f43b7f39930">&#9670;&nbsp;</a></span>updateView()</h2>
@@ -90,7 +97,15 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="camera_8h_source.html#l00017">17</a> of file <a class="el" href="camera_8h_source.html">camera.h</a>.</p>
+<p>Update the view matrix based on the given transformation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transform</td><td>The transformation matrix to update the view matrix. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="camera_8h_source.html#l00035">35</a> of file <a class="el" href="camera_8h_source.html">camera.h</a>.</p>
 
 </div>
 </div>
@@ -107,7 +122,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="camera_8h_source.html#l00016">16</a> of file <a class="el" href="camera_8h_source.html">camera.h</a>.</p>
+<p>The projection matrix of the camera. The projection matrix transforms coordinates from view space to clip space. </p>
+
+<p class="definition">Definition at line <a class="el" href="camera_8h_source.html#l00029">29</a> of file <a class="el" href="camera_8h_source.html">camera.h</a>.</p>
 
 </div>
 </div>
@@ -123,7 +140,9 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="camera_8h_source.html#l00015">15</a> of file <a class="el" href="camera_8h_source.html">camera.h</a>.</p>
+<p>The view matrix of the camera. The view matrix transforms coordinates from world space to view space. </p>
+
+<p class="definition">Definition at line <a class="el" href="camera_8h_source.html#l00023">23</a> of file <a class="el" href="camera_8h_source.html">camera.h</a>.</p>
 
 </div>
 </div>

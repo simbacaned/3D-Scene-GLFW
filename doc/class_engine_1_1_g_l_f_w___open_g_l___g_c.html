@@ -52,31 +52,42 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a Graphics Context using GLFW for OpenGL rendering.  
+ <a href="class_engine_1_1_g_l_f_w___open_g_l___g_c.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html">GLFW_OpenGL_GC.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Engine::GLFW_OpenGL_GC:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="class_engine_1_1_g_l_f_w___open_g_l___g_c.png" alt=""/>
- </div></div>
+  <img src="class_engine_1_1_g_l_f_w___open_g_l___g_c.png" usemap="#Engine::GLFW_5FOpenGL_5FGC_map" alt=""/>
+  <map id="Engine::GLFW_5FOpenGL_5FGC_map" name="Engine::GLFW_5FOpenGL_5FGC_map">
+<area href="class_graphics_context.html" title="Abstract base class for graphics context interfaces." alt="GraphicsContext" shape="rect" coords="0,0,171,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a995b71e7e6917096d0e5b742ca58ecd0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_g_l_f_w___open_g_l___g_c.html#a995b71e7e6917096d0e5b742ca58ecd0">GLFW_OpenGL_GC</a> (GLFWwindow *win)</td></tr>
+<tr class="memdesc:a995b71e7e6917096d0e5b742ca58ecd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="class_engine_1_1_g_l_f_w___open_g_l___g_c.html" title="Represents a Graphics Context using GLFW for OpenGL rendering.">GLFW_OpenGL_GC</a> object.  <a href="class_engine_1_1_g_l_f_w___open_g_l___g_c.html#a995b71e7e6917096d0e5b742ca58ecd0">More...</a><br /></td></tr>
 <tr class="separator:a995b71e7e6917096d0e5b742ca58ecd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80e0153feb39b9b43c84aca4c750e07b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_g_l_f_w___open_g_l___g_c.html#a80e0153feb39b9b43c84aca4c750e07b">init</a> () override</td></tr>
+<tr class="memdesc:a80e0153feb39b9b43c84aca4c750e07b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the OpenGL graphics context. This method initializes the OpenGL graphics context, preparing it for rendering. The specific behavior depends on the underlying GLFW window.  <a href="class_engine_1_1_g_l_f_w___open_g_l___g_c.html#a80e0153feb39b9b43c84aca4c750e07b">More...</a><br /></td></tr>
 <tr class="separator:a80e0153feb39b9b43c84aca4c750e07b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac862b02d3d47a0bade883182a3aabd35"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_g_l_f_w___open_g_l___g_c.html#ac862b02d3d47a0bade883182a3aabd35">swapBuffers</a> () override</td></tr>
+<tr class="memdesc:ac862b02d3d47a0bade883182a3aabd35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Swap the front and back buffers of the rendering context. This method swaps the front and back buffers of the rendering context, presenting the rendered image to the screen. This is typically used for double-buffering.  <a href="class_engine_1_1_g_l_f_w___open_g_l___g_c.html#ac862b02d3d47a0bade883182a3aabd35">More...</a><br /></td></tr>
 <tr class="separator:ac862b02d3d47a0bade883182a3aabd35"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:aec2dd61a9d74d8c49411345949e3c7b0"><td class="memItemLeft" align="right" valign="top">GLFWwindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_g_l_f_w___open_g_l___g_c.html#aec2dd61a9d74d8c49411345949e3c7b0">m_window</a></td></tr>
+<tr class="memdesc:aec2dd61a9d74d8c49411345949e3c7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The GLFW window associated with this graphics context.  <a href="class_engine_1_1_g_l_f_w___open_g_l___g_c.html#aec2dd61a9d74d8c49411345949e3c7b0">More...</a><br /></td></tr>
 <tr class="separator:aec2dd61a9d74d8c49411345949e3c7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html#l00009">9</a> of file <a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html">GLFW_OpenGL_GC.h</a>.</p>
+<div class="textblock"><p>Represents a Graphics Context using GLFW for OpenGL rendering. </p>
+
+<p class="definition">Definition at line <a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html#l00015">15</a> of file <a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html">GLFW_OpenGL_GC.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a995b71e7e6917096d0e5b742ca58ecd0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a995b71e7e6917096d0e5b742ca58ecd0">&#9670;&nbsp;</a></span>GLFW_OpenGL_GC()</h2>
@@ -102,7 +113,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html#l00012">12</a> of file <a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html">GLFW_OpenGL_GC.h</a>.</p>
+<p>Construct a new <a class="el" href="class_engine_1_1_g_l_f_w___open_g_l___g_c.html" title="Represents a Graphics Context using GLFW for OpenGL rendering.">GLFW_OpenGL_GC</a> object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">win</td><td>The GLFW window associated with this graphics context. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html#l00022">22</a> of file <a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html">GLFW_OpenGL_GC.h</a>.</p>
 
 </div>
 </div>
@@ -129,6 +148,10 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Initialize the OpenGL graphics context. This method initializes the OpenGL graphics context, preparing it for rendering. The specific behavior depends on the underlying GLFW window. </p>
+
+<p>Implements <a class="el" href="class_graphics_context.html#a9d9e893ff7a5f64f7f0807e264068662">GraphicsContext</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_g_l_f_w___open___g_c_8cpp_source.html#l00014">14</a> of file <a class="el" href="_g_l_f_w___open___g_c_8cpp_source.html">GLFW_Open_GC.cpp</a>.</p>
 
@@ -157,6 +180,10 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Swap the front and back buffers of the rendering context. This method swaps the front and back buffers of the rendering context, presenting the rendered image to the screen. This is typically used for double-buffering. </p>
+
+<p>Implements <a class="el" href="class_graphics_context.html#a7d85caf6065d0e5adc280c2cf2f65a8a">GraphicsContext</a>.</p>
+
 <p class="definition">Definition at line <a class="el" href="_g_l_f_w___open___g_c_8cpp_source.html#l00052">52</a> of file <a class="el" href="_g_l_f_w___open___g_c_8cpp_source.html">GLFW_Open_GC.cpp</a>.</p>
 
 </div>
@@ -182,7 +209,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html#l00016">16</a> of file <a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html">GLFW_OpenGL_GC.h</a>.</p>
+<p>The GLFW window associated with this graphics context. </p>
+
+<p class="definition">Definition at line <a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html#l00039">39</a> of file <a class="el" href="_g_l_f_w___open_g_l___g_c_8h_source.html">GLFW_OpenGL_GC.h</a>.</p>
 
 </div>
 </div>

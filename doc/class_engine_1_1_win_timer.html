@@ -52,6 +52,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>Class representing a high-resolution timer on Windows platform.  
+ <a href="class_engine_1_1_win_timer.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="win_timer_8h_source.html">winTimer.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Engine::WinTimer:</div>
@@ -66,13 +69,13 @@ Inheritance diagram for Engine::WinTimer:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae572f7db8e34a9f30cc566a2bb957a8f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_win_timer.html#ae572f7db8e34a9f30cc566a2bb957a8f">start</a> () override</td></tr>
-<tr class="memdesc:ae572f7db8e34a9f30cc566a2bb957a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start or reset the timer.  <a href="class_engine_1_1_win_timer.html#ae572f7db8e34a9f30cc566a2bb957a8f">More...</a><br /></td></tr>
+<tr class="memdesc:ae572f7db8e34a9f30cc566a2bb957a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the timer. Initializes the timer by capturing the current timestamp.  <a href="class_engine_1_1_win_timer.html#ae572f7db8e34a9f30cc566a2bb957a8f">More...</a><br /></td></tr>
 <tr class="separator:ae572f7db8e34a9f30cc566a2bb957a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6dbf598840f6cb5c39f2b6b6f1038fa7"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_win_timer.html#a6dbf598840f6cb5c39f2b6b6f1038fa7">reset</a> () override</td></tr>
-<tr class="memdesc:a6dbf598840f6cb5c39f2b6b6f1038fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the timer and return the elapsed time.  <a href="class_engine_1_1_win_timer.html#a6dbf598840f6cb5c39f2b6b6f1038fa7">More...</a><br /></td></tr>
+<tr class="memdesc:a6dbf598840f6cb5c39f2b6b6f1038fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the timer. Resets the timer by capturing the current timestamp and returning the elapsed time.  <a href="class_engine_1_1_win_timer.html#a6dbf598840f6cb5c39f2b6b6f1038fa7">More...</a><br /></td></tr>
 <tr class="separator:a6dbf598840f6cb5c39f2b6b6f1038fa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88fb384b0e70c003d027224ed87022c6"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_engine_1_1_win_timer.html#a88fb384b0e70c003d027224ed87022c6">getTimeElapsed</a> () override</td></tr>
-<tr class="memdesc:a88fb384b0e70c003d027224ed87022c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the time elapsed since the timer was started.  <a href="class_engine_1_1_win_timer.html#a88fb384b0e70c003d027224ed87022c6">More...</a><br /></td></tr>
+<tr class="memdesc:a88fb384b0e70c003d027224ed87022c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the elapsed time. Returns the time elapsed since the last reset or start operation.  <a href="class_engine_1_1_win_timer.html#a88fb384b0e70c003d027224ed87022c6">More...</a><br /></td></tr>
 <tr class="separator:a88fb384b0e70c003d027224ed87022c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -85,9 +88,9 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a9cfacb01a6898b0c2151465c9ce9c697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Windows specific timer which use queryPerformanceCount </p>
+<div class="textblock"><p>Class representing a high-resolution timer on Windows platform. </p>
 
-<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00011">11</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00016">16</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a88fb384b0e70c003d027224ed87022c6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88fb384b0e70c003d027224ed87022c6">&#9670;&nbsp;</a></span>getTimeElapsed()</h2>
@@ -112,12 +115,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the time elapsed since the timer was started. </p>
-<dl class="section return"><dt>Returns</dt><dd>The time elapsed since the timer was started, in seconds. </dd></dl>
+<p>Get the elapsed time. Returns the time elapsed since the last reset or start operation. </p>
+<dl class="section return"><dt>Returns</dt><dd>The elapsed time in seconds. </dd></dl>
 
 <p>Implements <a class="el" href="class_engine_1_1_timer.html#a91b8e4a6561a174fdf88952878d74c3a">Engine::Timer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00022">22</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00043">43</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
 
 </div>
 </div>
@@ -144,12 +147,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reset the timer and return the elapsed time. </p>
-<dl class="section return"><dt>Returns</dt><dd>The time elapsed since the timer was started or last reset, in seconds. </dd></dl>
+<p>Reset the timer. Resets the timer by capturing the current timestamp and returning the elapsed time. </p>
+<dl class="section return"><dt>Returns</dt><dd>The elapsed time in seconds since the last reset. </dd></dl>
 
 <p>Implements <a class="el" href="class_engine_1_1_timer.html#a10f41601543d44c338a18809b08339d0">Engine::Timer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00020">20</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00035">35</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
 
 </div>
 </div>
@@ -176,11 +179,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Start or reset the timer. </p>
+<p>Start the timer. Initializes the timer by capturing the current timestamp. </p>
 
 <p>Implements <a class="el" href="class_engine_1_1_timer.html#a5d0ca72413402711ea5279702f060404">Engine::Timer</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00014">14</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00023">23</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
 
 </div>
 </div>
@@ -204,8 +207,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The end time captured using QueryPerformanceCounter. </p>
 
-<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00030">30</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00052">52</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
 
 </div>
 </div>
@@ -228,8 +232,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The frequency of the high-resolution timer. </p>
 
-<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00031">31</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00053">53</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
 
 </div>
 </div>
@@ -252,8 +257,9 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>The start time captured using QueryPerformanceCounter. </p>
 
-<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00029">29</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="win_timer_8h_source.html#l00051">51</a> of file <a class="el" href="win_timer_8h_source.html">winTimer.h</a>.</p>
 
 </div>
 </div>

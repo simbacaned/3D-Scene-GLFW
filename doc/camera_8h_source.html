@@ -52,22 +52,24 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="application_8h.html">core/application.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_camera.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_camera.html">Camera</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_camera.html#add93fedd6b9a6a6e2c784aeda624de83">   15</a></span>&#160;    glm::mat4 <a class="code" href="class_camera.html#add93fedd6b9a6a6e2c784aeda624de83">view</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_camera.html#a43555a0ae83f9ec696ee257e5fd48cf2">   16</a></span>&#160;    glm::mat4 <a class="code" href="class_camera.html#a43555a0ae83f9ec696ee257e5fd48cf2">projection</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_camera.html#abe39e28c2925fbdbeb9e3f43b7f39930">   17</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera.html#abe39e28c2925fbdbeb9e3f43b7f39930">updateView</a>(<span class="keyword">const</span> glm::mat4&amp; transform)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_camera.html#add93fedd6b9a6a6e2c784aeda624de83">view</a> = glm::inverse(transform);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_camera.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_camera.html">Camera</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_camera.html#add93fedd6b9a6a6e2c784aeda624de83">   23</a></span>&#160;    glm::mat4 <a class="code" href="class_camera.html#add93fedd6b9a6a6e2c784aeda624de83">view</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_camera.html#a43555a0ae83f9ec696ee257e5fd48cf2">   29</a></span>&#160;    glm::mat4 <a class="code" href="class_camera.html#a43555a0ae83f9ec696ee257e5fd48cf2">projection</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_camera.html#abe39e28c2925fbdbeb9e3f43b7f39930">   35</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_camera.html#abe39e28c2925fbdbeb9e3f43b7f39930">updateView</a>(<span class="keyword">const</span> glm::mat4&amp; transform)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="class_camera.html#add93fedd6b9a6a6e2c784aeda624de83">view</a> = glm::inverse(transform);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_camera_html_add93fedd6b9a6a6e2c784aeda624de83"><div class="ttname"><a href="class_camera.html#add93fedd6b9a6a6e2c784aeda624de83">Camera::view</a></div><div class="ttdeci">glm::mat4 view</div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00015">camera.h:15</a></div></div>
-<div class="ttc" id="aclass_camera_html_a43555a0ae83f9ec696ee257e5fd48cf2"><div class="ttname"><a href="class_camera.html#a43555a0ae83f9ec696ee257e5fd48cf2">Camera::projection</a></div><div class="ttdeci">glm::mat4 projection</div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00016">camera.h:16</a></div></div>
-<div class="ttc" id="aclass_camera_html_abe39e28c2925fbdbeb9e3f43b7f39930"><div class="ttname"><a href="class_camera.html#abe39e28c2925fbdbeb9e3f43b7f39930">Camera::updateView</a></div><div class="ttdeci">void updateView(const glm::mat4 &amp;transform)</div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00017">camera.h:17</a></div></div>
-<div class="ttc" id="aclass_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00012">camera.h:12</a></div></div>
+<div class="ttc" id="aclass_camera_html_add93fedd6b9a6a6e2c784aeda624de83"><div class="ttname"><a href="class_camera.html#add93fedd6b9a6a6e2c784aeda624de83">Camera::view</a></div><div class="ttdeci">glm::mat4 view</div><div class="ttdoc">The view matrix of the camera. The view matrix transforms coordinates from world space to view space.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00023">camera.h:23</a></div></div>
+<div class="ttc" id="aclass_camera_html_a43555a0ae83f9ec696ee257e5fd48cf2"><div class="ttname"><a href="class_camera.html#a43555a0ae83f9ec696ee257e5fd48cf2">Camera::projection</a></div><div class="ttdeci">glm::mat4 projection</div><div class="ttdoc">The projection matrix of the camera. The projection matrix transforms coordinates from view space to ...</div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00029">camera.h:29</a></div></div>
+<div class="ttc" id="aclass_camera_html_abe39e28c2925fbdbeb9e3f43b7f39930"><div class="ttname"><a href="class_camera.html#abe39e28c2925fbdbeb9e3f43b7f39930">Camera::updateView</a></div><div class="ttdeci">void updateView(const glm::mat4 &amp;transform)</div><div class="ttdoc">Update the view matrix based on the given transformation.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00035">camera.h:35</a></div></div>
+<div class="ttc" id="aclass_camera_html"><div class="ttname"><a href="class_camera.html">Camera</a></div><div class="ttdoc">Represents a camera in 3D space.</div><div class="ttdef"><b>Definition:</b> <a href="camera_8h_source.html#l00016">camera.h:16</a></div></div>
 <div class="ttc" id="aapplication_8h_html"><div class="ttname"><a href="application_8h.html">application.h</a></div><div class="ttdoc">The Application class is responsible for managing the main application loop, handling events,...</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
